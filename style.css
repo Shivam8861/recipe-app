@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:beige ;
+    color: black;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    background-color: rgba(44, 7, 7, 0.856);
+
+
+}
+header nav h1{
+    font-size: bold;
+    text-transform: uppercase;
+    color: beige;
+    letter-spacing: 1px;
+}
+header nav form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input[type="text"]{
+   flex-grow: 1;
+   margin-right: 10px;
+}
+form input[type="text"],button[type="submit"]{
+   border: none;
+   font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: beige;
+    color: rgba(44, 7, 7, 0.856) ;
+
+}
+form button[type="submit"]{
+    background-color: rgba(44, 7, 7, 0.856);
+    border:1px solid beige;
+    color: beige;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+form button[type="submit"]:hover{
+    background-color:beige;
+    color: rgba(44, 7, 7, 0.856) ;
+}
+/* main section */
+.recipe-container{
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width:80px ;
+    margin: 10px auto;
+    padding: 20px;
+}
+/* js class */
+.recipe{
+    background-color:rgba(44, 7, 7, 0.856);
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(78,73,73,0.1), -0px -5px -10px rgba(38,33,33,0.5);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:600px){
+    header nav{
+        flex-direction: column;
+    }
+   header nav form{
+    width: 80%;
+    margin-top: 20px;
+   } 
+}
